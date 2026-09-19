@@ -29,7 +29,7 @@ export default function Home() {
             width={1017}
             height={1024}
             priority
-            className="h-auto w-[min(17rem,48vw)] mix-blend-screen"
+            className="h-auto w-[min(34rem,96vw)] mix-blend-screen"
           />
         </div>
         <p className="absolute bottom-8 z-10 px-5 text-center text-[0.65rem] uppercase tracking-[0.28em] text-white/80">
