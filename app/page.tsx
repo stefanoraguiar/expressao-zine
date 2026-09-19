@@ -8,18 +8,31 @@ export default function Home() {
     <main>
       <section
         id="inicio"
-        className="relative flex h-svh min-h-[36rem] items-end justify-center overflow-hidden bg-sea"
+        className="relative flex h-svh min-h-[36rem] items-center justify-center overflow-hidden bg-sea"
       >
         <Image
           src="/images/cover.webp"
-          alt="Capa da Expressão: figura de braços abertos no Atlântico, com o título em letras brancas."
+          alt="Figura de braços abertos no Atlântico, capa da primeira edição da Expressão."
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_30%]"
+          className="object-cover object-center"
         />
         <div className="grain" />
-        <p className="relative mb-8 px-5 text-center text-[0.65rem] uppercase tracking-[0.28em] text-white/80">
+        <div className="relative z-10 flex flex-col items-center px-6">
+          <p className="mb-6 text-center text-[0.65rem] uppercase tracking-[0.28em] text-white/80">
+            {site.edition} · {site.month}
+          </p>
+          <Image
+            src="/images/logo.png"
+            alt="Expressão"
+            width={1017}
+            height={1024}
+            priority
+            className="h-auto w-[min(17rem,48vw)] mix-blend-screen"
+          />
+        </div>
+        <p className="absolute bottom-8 z-10 px-5 text-center text-[0.65rem] uppercase tracking-[0.28em] text-white/80">
           Sem pressão
         </p>
       </section>
