@@ -22,8 +22,8 @@ export default function TermosPage() {
       </p>
       <h2 className="pt-4 font-display text-2xl tracking-wide">Preço e pagamento</h2>
       <p>
-        O preço da edição é {site.priceLabel}. Encomendas de pré-impressão
-        custam {site.preprintPriceLabel}. Os valores no pagamento (incluindo
+        O preço da edição é {site.priceLabel}. A compra antes do fechamento
+        custa {site.preprintPriceLabel}. Os valores no pagamento (incluindo
         portes) aparecem em euros no Stripe antes de confirmares. O pagamento
         é processado pela Stripe. Não guardamos dados do cartão.
       </p>

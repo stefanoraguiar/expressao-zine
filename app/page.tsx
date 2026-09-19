@@ -68,7 +68,7 @@ export default function Home() {
           </div>
           <dl className="mt-12 space-y-3 text-[0.8rem] uppercase tracking-[0.16em]">
             <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
-              <dt>Pré-impressão</dt>
+              <dt>Compra antes do fechamento</dt>
               <dd>{site.preprintPriceLabel}</dd>
             </div>
             <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
