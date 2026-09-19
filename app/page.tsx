@@ -56,14 +56,12 @@ export default function Home() {
           </h1>
           <div className="mt-10 space-y-6 text-[1.05rem] leading-8">
             <p>
-              Um objeto impresso. {site.pages} páginas. Fotos e textos de{" "}
-              {site.theme}: autorretratos, a Rita ao sol, um texto da Jade, um
-              ensaio de shibari, uma crónica de amores de verão, uma colagem da
-              Maré.
+              Encomende a sua edição impressa da Expressão. Esta zine esta disponível exclusivamente
+              na sua versão impressa. O fechamento da 1a edição está para acontecer. Enquanto isso, 
+              pode encomendar antecipadamente com um desconto de 4€ e ainda ajuda o projeto.
             </p>
             <p>
-              Impressão e envio feitos à mão, a partir daqui, para a União
-              Europeia.
+              Envio gratuito para a União Europeia.
             </p>
           </div>
           <dl className="mt-12 space-y-3 text-[0.8rem] uppercase tracking-[0.16em]">
@@ -117,12 +115,12 @@ export default function Home() {
             <div className="mt-10 space-y-6 text-[1.05rem] leading-8 text-cream/90">
               <p>
                 Chega ao fim o Verão. Nasce este projeto de uma vontade de se
-                expressar sem viés financeiro, sem um objetivo claro de
+                expressar. Sem viés financeiro, sem um objetivo claro de
                 sucesso. Sucesso é chegar até aqui e ter estas páginas
                 impressas.
               </p>
               <p>
-                Feito com as Ritas e a Jade, e com o projeto gráfico da Maré.
+                Feito com o apoio da Maré, da Rita e da Jade, e com o projeto gráfico da Maré.
                 Acabou o Verão, e começou a Expressão. Que o teu Outono seja
                 também assim.
               </p>
