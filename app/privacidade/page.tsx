@@ -24,7 +24,8 @@ export default function PrivacidadePage() {
       <p>
         Este site não usa cookies de análise, publicidade ou redes sociais. Não
         há newsletter, contas nem formulários. Não guardamos uma base de dados
-        com os teus dados.
+        com os teus dados. A confirmação de idade (21+) fica só no teu
+        browser, para não voltar a perguntar; não nos é enviada.
       </p>
       <h2 className="pt-4 font-display text-2xl tracking-wide">Encomendas</h2>
       <p>

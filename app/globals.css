@@ -17,6 +17,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html:not([data-age="ok"]) {
+  overflow: hidden;
+}
+
+html:not([data-age="ok"]) .site-shell {
+  visibility: hidden;
+}
+
+html[data-age="ok"] .age-gate {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

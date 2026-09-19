@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
+import { AgeGate } from "@/components/AgeGate";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { site } from "@/lib/site";
+import { AGE_STORAGE_KEY, site } from "@/lib/site";
 import "./globals.css";
 
 const plaster = localFont({
@@ -40,15 +42,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${plaster.variable} ${elite.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-paper text-sea">
-        <a
-          href="#conteudo"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2"
-        >
-          Saltar para o conteúdo
-        </a>
-        <SiteHeader />
-        <div id="conteudo">{children}</div>
-        <SiteFooter />
+        <Script id="age-check" strategy="beforeInteractive">
+          {`try{if(localStorage.getItem(${JSON.stringify(AGE_STORAGE_KEY)})==="1")document.documentElement.dataset.age="ok"}catch(e){}`}
+        </Script>
+        <AgeGate />
+        <div className="site-shell">
+          <a
+            href="#conteudo"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2"
+          >
+            Saltar para o conteúdo
+          </a>
+          <SiteHeader />
+          <div id="conteudo">{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

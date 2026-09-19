@@ -55,6 +55,10 @@ export default function Home() {
           </div>
           <dl className="mt-12 space-y-3 text-[0.8rem] uppercase tracking-[0.16em]">
             <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
+              <dt>Pré-impressão</dt>
+              <dd>{site.preprintPriceLabel}</dd>
+            </div>
+            <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
               <dt>Preço</dt>
               <dd>{site.priceLabel}</dd>
             </div>
@@ -106,16 +110,16 @@ export default function Home() {
           </div>
           <dl className="space-y-4 text-[0.75rem] uppercase tracking-[0.16em] text-cream/75">
             <div>
-              <dt className="text-cream/45">Fotos e edição</dt>
+              <dt className="text-cream/45">Fotos</dt>
               <dd className="mt-1">Stefano Aguiar</dd>
             </div>
             <div>
-              <dt className="text-cream/45">Modelo</dt>
-              <dd className="mt-1">Rita Bandeira</dd>
+              <dt className="text-cream/45">Modelos</dt>
+              <dd className="mt-1">Rita Bandeira · Stefano Aguiar</dd>
             </div>
             <div>
-              <dt className="text-cream/45">Texto</dt>
-              <dd className="mt-1">Jade Nunes · Stefano Aguiar · Maré</dd>
+              <dt className="text-cream/45">Textos</dt>
+              <dd className="mt-1">Jade Nunes · Maré · Stefano Aguiar</dd>
             </div>
             <div>
               <dt className="text-cream/45">Projeto gráfico</dt>

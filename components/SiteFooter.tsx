@@ -7,7 +7,7 @@ export function SiteFooter() {
         <p>
           {site.name}
           <span className="mt-2 block normal-case tracking-normal text-cream/55">
-            Contém nu artístico.
+            Contém nu artístico. Apenas 21+.
           </span>
         </p>
         <ul className="flex flex-col gap-2 sm:items-end">
