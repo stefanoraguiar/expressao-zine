@@ -84,8 +84,15 @@ export default function Home() {
               <dd>{site.deliveryEstimate}</dd>
             </div>
           </dl>
-          <div className="mt-14">
-            <BuyButton />
+          <div className="mt-14 flex flex-col gap-8">
+            <BuyButton
+              href={site.preprintPaymentLink}
+              label={`Comprar antes do fechamento — ${site.preprintPriceLabel}`}
+            />
+            <BuyButton
+              href={site.finalPaymentLink}
+              label={`Comprar a 1ª edição — ${site.priceLabel}`}
+            />
           </div>
         </div>
       </section>

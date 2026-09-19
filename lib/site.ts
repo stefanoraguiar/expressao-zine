@@ -15,7 +15,7 @@ export const site = {
   deliveryEstimate: "2 a 4 semanas após o pagamento",
   description:
     "Zine independente. 1.ª edição, setembro 2026. Sem pressão. Apenas 21+.",
-  paymentLink: process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "",
+  preprintPaymentLink:
+    process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_PREPRINT ?? "",
+  finalPaymentLink: process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_FINAL ?? "",
 } as const;
-
-export const checkoutEnabled = Boolean(site.paymentLink);

@@ -27,7 +27,8 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://expressao.online
-          NEXT_PUBLIC_STRIPE_PAYMENT_LINK: ${{ secrets.NEXT_PUBLIC_STRIPE_PAYMENT_LINK }}
+          NEXT_PUBLIC_STRIPE_PAYMENT_LINK_PREPRINT: ${{ secrets.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_PREPRINT }}
+          NEXT_PUBLIC_STRIPE_PAYMENT_LINK_FINAL: ${{ secrets.NEXT_PUBLIC_STRIPE_PAYMENT_LINK_FINAL }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -27,10 +27,13 @@ Em **Domain List → Manage → Advanced DNS**, apaga o parking/URL redirect da 
 
 TTL pode ficar automático. HTTPS fica a cargo do GitHub (demora até algumas horas depois do DNS).
 
-### Stripe (quando houver preço)
+### Stripe (dois preços)
 
-Cria um [Payment Link](https://dashboard.stripe.com/payment-links) com morada de envio na UE. No repositório, **Settings → Secrets → Actions**, adiciona:
+Cria dois [Payment Links](https://dashboard.stripe.com/payment-links) em EUR, com morada de envio limitada à UE e redirect de sucesso para `https://expressao.online/sucesso/`:
 
-`NEXT_PUBLIC_STRIPE_PAYMENT_LINK` = o URL do link
+1. **Compra antes do fechamento** — 8 €  
+   Secret: `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_PREPRINT`
+2. **1.ª edição** — 12 € (quando estiver pronta)  
+   Secret: `NEXT_PUBLIC_STRIPE_PAYMENT_LINK_FINAL`
 
-Depois volta a correr o workflow **Deploy**.
+No repositório: **Settings → Secrets and variables → Actions**. Depois volta a correr o workflow **Deploy**. Sem o URL, o botão fica em “Pagamento em breve”.

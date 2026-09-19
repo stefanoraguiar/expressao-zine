@@ -1,10 +1,13 @@
-import { checkoutEnabled, site } from "@/lib/site";
+type BuyButtonProps = {
+  href: string;
+  label: string;
+};
 
-export function BuyButton() {
-  if (!checkoutEnabled) {
+export function BuyButton({ href, label }: BuyButtonProps) {
+  if (!href) {
     return (
       <p className="cta-quiet">
-        Comprar a 1ª edição
+        {label}
         <span className="mt-2 block text-[0.7rem] tracking-[0.14em]">
           Pagamento em breve
         </span>
@@ -13,12 +16,8 @@ export function BuyButton() {
   }
 
   return (
-    <a
-      className="cta"
-      href={site.paymentLink}
-      rel="noopener noreferrer"
-    >
-      Comprar a 1ª edição
+    <a className="cta" href={href} rel="noopener noreferrer">
+      {label}
     </a>
   );
 }
