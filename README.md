@@ -1,0 +1,36 @@
+# Expressão
+
+Site da 1.ª edição — [expressao.online](https://expressao.online).
+
+## Local
+
+```bash
+npm install
+npm run dev
+```
+
+## Publicar (GitHub Pages)
+
+O site é estático. Cada push para `main` gera e publica `out/` via GitHub Actions.
+
+### Namecheap → expressao.online
+
+Em **Domain List → Manage → Advanced DNS**, apaga o parking/URL redirect da Namecheap e cria:
+
+| Type | Host | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `<o-teu-user>.github.io` |
+
+TTL pode ficar automático. HTTPS fica a cargo do GitHub (demora até algumas horas depois do DNS).
+
+### Stripe (quando houver preço)
+
+Cria um [Payment Link](https://dashboard.stripe.com/payment-links) com morada de envio na UE. No repositório, **Settings → Secrets → Actions**, adiciona:
+
+`NEXT_PUBLIC_STRIPE_PAYMENT_LINK` = o URL do link
+
+Depois volta a correr o workflow **Deploy**.
