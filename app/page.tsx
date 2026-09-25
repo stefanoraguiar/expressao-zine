@@ -65,9 +65,14 @@ export default function Home() {
             </p>
           </div>
           <dl className="mt-12 space-y-3 text-[0.8rem] uppercase tracking-[0.16em]">
-            <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
+            <div className="flex justify-between gap-6 border-t border-sea/20 pt-3 text-water">
               <dt>Compra antes do fechamento</dt>
-              <dd>{site.preprintPriceLabel}</dd>
+              <dd>
+                {site.preprintPriceLabel}
+                <span className="mt-1 block text-[0.65rem] tracking-[0.14em]">
+                  Encerrada
+                </span>
+              </dd>
             </div>
             <div className="flex justify-between gap-6 border-t border-sea/20 pt-3">
               <dt>Preço</dt>
@@ -82,11 +87,7 @@ export default function Home() {
               <dd>{site.deliveryEstimate}</dd>
             </div>
           </dl>
-          <div className="mt-14 flex flex-col gap-8">
-            <BuyButton
-              href={site.preprintPaymentLink}
-              label={`Comprar antes do fechamento — ${site.preprintPriceLabel}`}
-            />
+          <div className="mt-14">
             <BuyButton
               href={site.finalPaymentLink}
               label={`Comprar a 1ª edição — ${site.priceLabel}`}
